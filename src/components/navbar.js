@@ -1,17 +1,16 @@
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./Cartwidget";
+
 
 
 function NavBar (){
     return(
-        <div className='flex justify-evenly bg-sky-500'>
-            <div className=' flex justify-start basis-1/4'>
-                <h1 className="px-4">Todo Gamers</h1>
-                <button className="px-4">Consolas</button>
-                <button className="px-4">Accesorios</button>
-            </div>
-            <div className="basis 1/2">
+        <div className='flex justify-around bg-blue-400 p-4 '>
+            <Link to={"/"}> <h1 className='basis-1/4 text-2xl italic'>TODO GAMERS</h1> </Link>
+            <NavLink to="/cat/Sony" className="hover:text-white">Sony</NavLink>
+            <NavLink to="/cat/Microsoft" className="hover:text-white">Microsoft</NavLink>
+            <NavLink to="/cat/Nintendo" className="hover:text-white">Nintendo</NavLink>
             <CartWidget/>
-            </div>
         </div>
     )
 }
